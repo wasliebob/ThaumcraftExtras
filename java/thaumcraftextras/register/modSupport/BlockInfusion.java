@@ -3,7 +3,7 @@ package thaumcraftextras.register.modSupport;
 
 public class BlockInfusion {
 	
-	/** Mod not yet released talked to the developer (DrunkenMafia) talked about his plans and i will have support for that mod */
+	/** Mod not yet released talked to the developer (DrunkMafia) talked about his plans and i will have support for that mod */
 	
 	public static void isInstalled()
 	{
