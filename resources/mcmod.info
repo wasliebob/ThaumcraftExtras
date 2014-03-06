@@ -1,0 +1,16 @@
+[
+{
+  "modid": "ThaumcraftExtras",
+  "name": "Thaumcraft Extras",
+  "description": "Thaumcraft Addon",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://wasliebob.nl/TCE.html",
+  "updateUrl": "",
+  "authors": ["Wasliebob"],
+  "credits": "Creator: Wasliebob; Texturer: TechMac",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
