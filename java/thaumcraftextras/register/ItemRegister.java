@@ -170,7 +170,7 @@ public class ItemRegister {
         
         /** Tier Rods */
 		ironRodItem = new RodItem(Config.ironRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ironRodTexture);
-        ironRod = new WandRod("ROD_IRON", 65, new ItemStack(ironRodItem), 14,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_iron.png"));
+        ironRod = new WandRod("IRON", 65, new ItemStack(ironRodItem), 14,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_iron.png"));
         LanguageRegistry.addName(ironRodItem, "Iron Rod");
         
 		goldRodItem = new RodItem(Config.goldRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.goldRodTexture);
