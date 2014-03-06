@@ -30,17 +30,9 @@ public class MultiPart {
 		registerMultipart(BlockRegister.lightBlock, i);
 		
 		if(Config.multipartTC4 == true){
-		//registerMultipart(ConfigBlocks.blockWoodenDevice, 6);
-		//registerMultipart(ConfigBlocks.blockWoodenDevice, 7);
-		
-		//registerMultipart(ConfigBlocks.blockCosmeticOpaque, 0);
-		//registerMultipart(ConfigBlocks.blockCosmeticOpaque, 1);
-		
-		for(int i = 0; i <= 6; i++)
-		registerMultipart(ConfigBlocks.blockCosmeticSolid, i);
 
 		}
-		
+
 		new MultiPartBlock(ConfigBlocks.blockTube, MultipartTube.class, ConfigBlocks.blockTube.getUnlocalizedName()).init();
 	}
 

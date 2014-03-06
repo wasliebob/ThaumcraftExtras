@@ -442,7 +442,7 @@ public class ThaumcraftRecipeRegister {
 		"XIX",
 		'X', ItemRegister.darkThaumium,
 		'I', ItemRegister.magicTradeTier1,
-		'Y', new ItemStack(ItemRegister.devilRodItem, 1, 0)});
+		'Y', new ItemStack(MCKERegister.magicCrystalT3, 1, 0)});
 	
 	battery = ThaumcraftApi.addArcaneCraftingRecipe("Magic Energy", new ItemStack(MCKERegister.magicCrystal, 1, 50), CraftingAspects.exchangerBlock,  new Object[]{
 		"XIX",

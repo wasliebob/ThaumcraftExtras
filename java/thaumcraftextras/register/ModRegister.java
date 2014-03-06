@@ -1,11 +1,10 @@
 package thaumcraftextras.register;
 
-import cpw.mods.fml.common.Loader;
 import thaumcraftextras.helpers.LanguageConverting;
 import thaumcraftextras.main.Config;
-import thaumcraftextras.register.modSupport.Forestry;
 import thaumcraftextras.register.modSupport.MultiPart;
 import thaumcraftextras.register.modSupport.TinkersConstruct;
+import cpw.mods.fml.common.Loader;
 
 
 public class ModRegister {

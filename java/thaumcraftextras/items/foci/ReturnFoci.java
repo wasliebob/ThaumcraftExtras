@@ -1,9 +1,10 @@
 package thaumcraftextras.items.foci;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import thaumcraft.api.aspects.Aspect;
@@ -13,6 +14,9 @@ import thaumcraft.common.items.wands.ItemWandCasting;
 public class ReturnFoci extends ItemFoci {
 
         private static final AspectList visUsage = new AspectList().add(Aspect.ORDER, 2400);
+        public static Map<String, Double> xPos = new HashMap<String, Double>();
+        public static Map<String, Double> yPos = new HashMap<String, Double>();
+        public static Map<String, Double> zPos = new HashMap<String, Double>();
 
         public ReturnFoci(int i) {
                 super(i);
@@ -21,20 +25,20 @@ public class ReturnFoci extends ItemFoci {
         @Override
         public ItemStack onFocusRightClick(ItemStack itemstack, World world, EntityPlayer player, MovingObjectPosition movingobjectposition) {
             ItemWandCasting wand = (ItemWandCasting)itemstack.getItem();
-            if(player.getBedLocation(player.dimension) == null)
-            	return itemstack;
+           if(player.isSneaking()){
+        	   xPos.put(player.username, player.posX);
+        	   yPos.put(player.username, player.posY);
+        	   zPos.put(player.username, player.posZ);
+           }else{
             	
             if (wand.consumeAllVis(itemstack, player, getVisCost(), true)) {
-        
-            	if(player.getBedLocation(player.dimension) != null)
-            	{
-            	int bedX = player.getBedLocation(player.dimension).posX;
-            	int bedY = player.getBedLocation(player.dimension).posY;
-            	int bedZ = player.getBedLocation(player.dimension).posZ;
-            	player.setPosition(bedX, bedY, bedZ);
-            	}
+            	String name = player.username;
+            	if(xPos.containsKey(name) && yPos.containsKey(name) && zPos.containsKey(name)){
+            	player.setPosition(xPos.get(name), yPos.get(name), zPos.get(name));
             }
-      		return itemstack;
+            }
+           }
+           return itemstack;
         }
 
         @Override

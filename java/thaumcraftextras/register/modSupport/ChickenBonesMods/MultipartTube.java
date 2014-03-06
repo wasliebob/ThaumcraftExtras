@@ -7,11 +7,17 @@ import codechicken.multipart.minecraft.McMetaPart;
 
 public class MultipartTube extends McMetaPart {
 	
+	public MultipartTube(int meta)
+	{
+	super(0);	
+	}
+	
 	@Override
 	public Cuboid6 getBounds() {
 		Block tube = ConfigBlocks.blockTube;
-		
-		return new Cuboid6(tube.getBlockBoundsMinX(), tube.getBlockBoundsMinY(), tube.getBlockBoundsMinZ(), tube.getBlockBoundsMaxX(), tube.getBlockBoundsMaxY(), tube.getBlockBoundsMaxZ());
+		//return new Cuboid6(tube.getBlockBoundsMinX(), tube.getBlockBoundsMinY(), tube.getBlockBoundsMinZ(), tube.getBlockBoundsMaxX(), tube.getBlockBoundsMaxY(), tube.getBlockBoundsMaxZ());
+
+		return new Cuboid6(0.0, 0.0, 0.0, 1.0, 1.0, 1.0);
 	}
 
 	@Override

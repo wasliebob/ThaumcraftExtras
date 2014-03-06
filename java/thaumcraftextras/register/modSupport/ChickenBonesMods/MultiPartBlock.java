@@ -58,7 +58,7 @@ int id = world.getBlockId(pos.x, pos.y, pos.z);
 int meta = world.getBlockMetadata(pos.x, pos.y, pos.z);
 if (id == block.blockID) {
 try {
-//if(part.getName().equals("thaumcraftextras.register.modSupport.ChickenBonesMods.MultipartTube"))
+//if(part.getName().equals("thaumcraftextras.register.modSupport.ChickenBonesMods.MultipartTube") && meta != 0)
 //return null;
 
 if(part.getDeclaredConstructor(int.class) != null)

@@ -164,13 +164,16 @@ public class ItemRegister {
 		//LanguageRegistry.addName(book, TCELocalization.infoBook);
         
 		/** Special Wands */
-		ultimateRodItem = new RodItem(Config.ultimateRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ultimateRodTexture);
+		ultimateRodItem = new RodItem(Config.ultimateRodId).setUnlocalizedName("ultimate");
         ultimateRod = new WandRod("ULTIMATE", 9999999, new ItemStack(ultimateRodItem), 999, new CheatRodOnUpdate(),  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_ultimate.png"));
         LanguageRegistry.addName(ultimateRodItem, "Ultimate Rod");
         
         /** Tier Rods */
-		ironRodItem = new RodItem(Config.ironRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ironRodTexture);
-        ironRod = new WandRod("ROD_IRON", 65, new ItemStack(ironRodItem), 14,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_iron.png"));
+		//ironRodItem = new RodItem(Config.ironRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.ironRodTexture);
+		//ironRodItem = new RodItem(Config.ironRodId).setUnlocalizedName("iron");
+       // ironRod = new WandRod("IRON", 65, new ItemStack(ironRodItem), 14,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_iron.png"));
+		ironRodItem = new RodItem(Config.ironRodId).setUnlocalizedName("iron");
+        ironRod = new WandRod("IRON", 65, new ItemStack(ironRodItem), 14,  new ResourceLocation("thaumcraftextras","textures/models/wand_rod_iron.png"));
         LanguageRegistry.addName(ironRodItem, "Iron Rod");
         
 		goldRodItem = new RodItem(Config.goldRodId).setUnlocalizedName(MainHelper.modName + ":" + TCELocalization.goldRodTexture);
